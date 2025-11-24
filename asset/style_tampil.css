@@ -1,0 +1,59 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #473472;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%; /* Lebar 80% */
+            border-collapse: collapse; /* Garis tabel menyatu */
+            margin-top: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #8CE4FF;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color:#53629E ;
+            color: #333;
+            font-weight: bold;
+        }
+        .role-admin {
+            color: red;
+            font-weight: bold;
+        }
+        .role-user {
+            color: green;
+        }
+        nav {
+      background: #53629E;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    h3{
+        text-align:center;
+         padding:10px; 
+         color:white;
+    }
+    .button{
+        background-color: yellow;
+        color: black;
+        border-radius:10% ;
+    }
+    .buton{
+        background-color: red;
+        color: black;
+        border-radius: 10%;
+    }

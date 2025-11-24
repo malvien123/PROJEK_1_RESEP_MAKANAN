@@ -1,0 +1,98 @@
+/* ==================================== */
+/* Tambahan Styling untuk Detail Resep */
+/* ==================================== */
+
+/* TATA LETAK HEADER (Gambar + Info) */
+body{
+    background-color:firebrick;
+
+}
+.recipe-header-grid {
+    display: grid;
+    grid-template-columns: 40% 60%; /* Dua kolom: 40% untuk gambar, 60% untuk info */
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.image-wrapper {
+    /* Pastikan gambar terpusat */
+    text-align: center;
+}
+
+.recipe-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan lebih dramatis */
+    transition: transform 0.3s;
+}
+
+.header-info {
+    padding-top: 10px;
+}
+
+.recipe-title {
+    color: #cc5500; /* Warna yang lebih hangat */
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.uploader-info {
+    color: #888;
+    font-size: 1em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffc107; /* Garis pemisah berwarna */
+    margin-bottom: 20px;
+}
+
+/* Kotak Deskripsi Singkat di Header */
+.brief-description {
+    background-color: #fffaf0; /* Warna latar belakang lembut */
+    padding: 20px;
+    border-left: 5px solid #ff9900;
+    box-shadow: none;
+}
+
+/* Konten Utama (Bahan dan Langkah) */
+.recipe-content-full {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Styling Section Box */
+.section-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section-box .section-title {
+    color: #007bff;
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Bahan dan Langkah List */
+.recipe-list {
+    white-space: pre-wrap;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #444;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+/* Responsif untuk Detail Page */
+@media (max-width: 992px) {
+    .recipe-header-grid {
+        grid-template-columns: 1fr; /* Tumpuk menjadi 1 kolom di tablet */
+    }
+}

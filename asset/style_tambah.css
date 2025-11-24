@@ -1,0 +1,71 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 320px; /* DIPERKECIL */
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2193b0;
+      margin-bottom: 18px;
+      font-size: 20px; /* DIPERKECIL */
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 13px; /* DIPERKECIL */
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select ,button{
+      width: 100%;
+      padding: 8px; /* DIPERKECIL */
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      font-size: 13px; /* DIPERKECIL */
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #2193b0;
+      box-shadow: 0 0 4px rgba(33,147,176,0.4);
+    }
+
+    button[type="submit"] {
+      background: #2193b0;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      padding: 8px; /* DIPERKECIL */
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: #176d7a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }

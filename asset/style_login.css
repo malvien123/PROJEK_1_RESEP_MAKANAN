@@ -1,0 +1,111 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Font modern yang sering digunakan */
+    background: linear-gradient(135deg, #f0f4f7 0%, #dbe4f0 100%); /* Gradasi lembut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Kotak Form Utama (The Card) */
+.login-container {
+    background-color: #ffffff;
+    padding: 45px;
+    border-radius: 15px; /* Sudut lebih melengkung */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih dalam */
+    width: 380px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek saat form di-hover (Opsional: memberikan kesan interaktif) */
+.login-container:hover {
+    transform: translateY(-5px); 
+}
+
+/* Judul */
+h2 {
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 35px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* Kontrol Form */
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; /* Input lebih halus */
+    box-sizing: border-box; 
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); /* Efek fokus yang lembut */
+    background-color: #fff;
+    outline: none;
+}
+
+/* Tombol Login */
+button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+}
+
+/* Gaya Notifikasi (Sukses/Error) */
+.notification {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #e6ffed; /* Hijau super muda */
+    color: #008744; 
+    border: 1px solid #00c853;
+}
+
+.error {
+    background-color: #fff0f0; /* Merah super muda */
+    color: #c90000;
+    border: 1px solid #ff4444;
+}
