@@ -1,13 +1,10 @@
 <?php
 
-// controller/c_proses_login.php
-
 session_start();
 
 require_once '../model/m_koneksi.php'; 
 require_once '../model/m_user.php'; 
 
-// --- Inisialisasi Koneksi ---
 $koneksi_obj = new m_koneksi();
 $dbConnection = $koneksi_obj->koneksi;
 
@@ -15,12 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    // Inisialisasi Model dengan Koneksi DB
+ 
     $user_model = new m_user($dbConnection);
     $user_data = $user_model->verify_login($username, $password);
 
     if ($user_data) {
-        // Login BERHASIL: Simpan data ke SESSION (menggunakan array access)
+       
         $_SESSION['id_user'] = $user_data['id_user'];
         $_SESSION['username'] = $user_data['username'];
         $_SESSION['role'] = $user_data['role']; 
@@ -35,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         exit();
     } else {
-        // Login GAGAL
+        // Login gagal
         header('Location: ../view/Login.php?error=invalid_credentials');
         exit();
     }
@@ -43,4 +40,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Location: ../view/Login.php');
     exit();
 }
-// JANGAN ADA TAG PENUTUP 
