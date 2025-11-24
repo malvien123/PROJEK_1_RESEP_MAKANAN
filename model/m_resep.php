@@ -1,7 +1,4 @@
  <?php
-// model/m_resep.php
-// A. Include file parent model
-
 include_once 'm_data.php'; 
 class m_resep extends m_data {
     
@@ -14,11 +11,10 @@ class m_resep extends m_data {
     }
     
 
-    // 1. Implementasi method abstrak getAll()
+    
     protected function getAll() {
         $conn = $this->koneksi->koneksi; 
 
-        // LEFT JOIN akan memastikan semua resep diambil, meskipun id_user-nya NULL atau tidak cocok di tabel 'user'.
         $sql = "
             SELECT r.id_resep, r.nama_menu, r.gambar, r.deskripsi, r.tipe_gambar, r.id_user, u.username AS nama_pengunggah 
             FROM resep r
@@ -43,13 +39,10 @@ class m_resep extends m_data {
             }
         }
         
-        // Debugging di Model: Hapus baris ini setelah pengujian
-        // error_log("Resep terambil: " . count($result)); 
         
         return $result;
     }
 
-    // 2. Implementasi method abstrak getById() (Tetap sama, karena sudah benar)
     protected function getById($id_resep) {
         $conn = $this->koneksi->koneksi;
 

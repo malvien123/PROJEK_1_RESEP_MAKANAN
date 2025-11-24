@@ -3,24 +3,23 @@ class m_koneksi {
     private $host = "localhost";
     private $username = "root";
     private $pass = "";
-    private $db = "resep_makanan"; // NAMA DATABASE ANDA
+    private $db = "resep_makanan"; // NAMA DATABASE 
     
-    public $koneksi; // Properti publik untuk menampung objek koneksi mysqli
+    public $koneksi; 
 
     function __construct() {
-        // Menggunakan koneksi berorientasi objek (new mysqli)
+        // Menggunakan koneksi 
         $this->koneksi = new mysqli($this->host, $this->username, $this->pass, $this->db);
 
-        // Periksa error koneksi
+        
         if ($this->koneksi->connect_error) {
             // Menghentikan eksekusi dan menampilkan pesan error yang spesifik
             die("Koneksi database gagal: " . $this->koneksi->connect_error);
         }
         
-        // Hapus: return $this->koneksi; -> Constructor tidak perlu mengembalikan nilai
+       
     }
 
-    // Method penghancur koneksi (opsional)
     public function __destruct() {
         if ($this->koneksi && $this->koneksi->ping()) {
             $this->koneksi->close();

@@ -1,9 +1,8 @@
 <?php
-// model/m_user.php
 class m_user {
     private $db; 
 
-    // Constructor menerima koneksi database dari Controller (Dependency Injection)
+    // Constructor menerima koneksi database dari Controller 
     public function __construct($db_connection) {
         // Pastikan objek koneksi mysqli diberikan
         if (!$db_connection instanceof mysqli) {
@@ -12,10 +11,10 @@ class m_user {
         $this->db = $db_connection;
     }
 
-    // 1. FUNGSIONALITAS LOGIN 
+    //fungsi login
     public function verify_login($username, $password_input) 
     {
-        // PERBAIKAN KRITIS: Hanya mencari berdasarkan 'username' untuk menghindari error 'Unknown column email'
+       
         $sql = "SELECT id_user, username, password, role FROM user WHERE username = ?";
         
         $stmt = $this->db->prepare($sql);
@@ -25,7 +24,7 @@ class m_user {
              return false;
         }
 
-        // Hanya bind parameter untuk username (satu 's')
+        
         $stmt->bind_param("s", $username); 
         
         $stmt->execute();
@@ -48,7 +47,7 @@ class m_user {
         return false; // Login gagal
     }
     
-    // 2. FUNGSIONALITAS READ ALL (untuk v_tampil_user.php)
+   
     public function tampil_data() 
     {
         $sql = "SELECT * FROM user";
@@ -64,7 +63,7 @@ class m_user {
         return $data; 
     }
 
-    // 3. FUNGSIONALITAS READ BY ID (untuk v_update_user.php)
+   
     public function tampil_data_by_id($id_user) 
     {
         $sql = "SELECT * FROM user WHERE id_user = ?";
@@ -81,7 +80,7 @@ class m_user {
         return $data;
     }
 
-    // 4. FUNGSIONALITAS CREATE
+    // fungsi tambah
     public function tambah_data($username, $password_hash, $role) 
     {
         $sql = "INSERT INTO user(username, password, role) VALUES (?, ?, ?)";
@@ -96,7 +95,7 @@ class m_user {
         return $result;
     } 
 
-    // 5. FUNGSIONALITAS UPDATE
+    // fungsi update
     public function ubah_data($id_user, $username, $password_hash = null) 
     {
         if ($password_hash) {
@@ -119,7 +118,7 @@ class m_user {
         return $result;
     }
 
-    // 6. FUNGSIONALITAS DELETE
+    // fungsi hapus
     public function hapus_data($id_user) 
     {
         $sql = "DELETE FROM user WHERE id_user = ?";
