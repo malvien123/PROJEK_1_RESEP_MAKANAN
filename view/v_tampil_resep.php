@@ -1,27 +1,10 @@
 <?php
-// view/v_tampil_resep.php
-
-// FILE INI HANYA MENAMPILKAN DATA. SEMUA VARIABEL HARUS DISEDIAKAN OLEH CONTROLLER (c_resep.php)
-
-// Variabel yang diasumsikan tersedia dari c_resep.php:
-// $user_id (ID user yang sedang login)
-// $favorite_model (Objek m_favorit untuk cek status favorit)
-// $daftar_resep (Array/Object daftar resep)
-
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// -----------------------------------------------------------------
-// 🔥 PERBAIKAN: MEMASTIKAN $user_id TERSEDIA DENGAN AMAN
-// -----------------------------------------------------------------
-
-// Ambil nama user dari Sesi (Controller tidak perlu pass)
 $nama_user = $_SESSION['username'] ?? 'Pengguna';
 
-// Prioritaskan variabel $user_id yang di-pass Controller, 
-// kemudian ambil dari $_SESSION['id_user'] jika $user_id belum ada.
-// Variabel ini akan digunakan dalam kondisi if ($current_user_id) di loop.
 $current_user_id = $user_id ?? $_SESSION['id_user'] ?? null; 
 
 // Jika daftar resep belum terdefinisi

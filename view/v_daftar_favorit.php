@@ -1,50 +1,28 @@
 <?php
-// view/v_daftar_favorit.php
-// FILE INI HANYA MENAMPILKAN DATA. SEMUA VARIABEL HARUS DISEDIAKAN OLEH CONTROLLER (c_favorit.php)
+
 
 // Pastikan sesi sudah berjalan
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// KEAMANAN: Pastikan user sudah login
 if (!isset($_SESSION['id_user'])) {
     header('Location: Login.php');
     exit();
 }
 
-// Catatan: Variabel $data_resep_favorit sudah tersedia dari Controller c_favorit.php
-// Jika array belum terdefinisi (misal: Controller gagal memuat), inisialisasi sebagai array kosong.
 if (!isset($data_resep_favorit)) {
     $data_resep_favorit = [];
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <title>Resep Favorit Saya</title>
-    <link rel="stylesheet" href="../asset/style_tampil_resep.css"> 
+    <link rel="stylesheet" href="../asset/style_daftar_favorit.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <style>
-        /* Gaya dasar agar kartu resep terlihat rapi */
-        .resep-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
-        .card {
-            border: 1px solid #ccc; /* Diubah dari red ke abu-abu untuk tampilan yang lebih standar */
-            padding: 15px;
-            width: 300px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-        }
-    </style>
 </head>
 <body>
     <nav style="padding: 15px; background-color: #f8f8f8; display: flex; justify-content: space-between; align-items: center;">

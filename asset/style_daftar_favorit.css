@@ -1,0 +1,14 @@
+ .resep-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .card {
+            border: 1px solid #ccc; /* Diubah dari red ke abu-abu untuk tampilan yang lebih standar */
+            padding: 15px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }

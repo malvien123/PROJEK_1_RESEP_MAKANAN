@@ -1,23 +1,13 @@
 <?php
-// view/v_detail_resep.php
-// FILE INI HANYA MENAMPILKAN DATA. SEMUA LOGIKA HARUS DI CONTROLLER (c_resep.php)
-
-// 1. Pastikan sesi sudah dimulai
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// 2. KEAMANAN: Cek apakah Controller berhasil menyediakan data.
-// Variabel $detail_resep harus sudah diisi di c_resep.php sebelum file ini di-include.
 if (!isset($detail_resep) || !$detail_resep) {
-    // Jika data tidak ada (misalnya, ID resep salah), kembalikan user ke daftar.
-    // PENTING: Redirect harus ke Controller, BUKAN ke View.
+    
     header('Location: ../controller/c_resep.php'); 
     exit();
 }
-
-// Asumsi variabel lain (seperti $is_favorited, jika Anda memprosesnya di Controller) juga tersedia.
-// Kita akan menampilkan $detail_resep->nama_pengunggah yang didapatkan dari JOIN di m_resep.php
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -59,18 +49,7 @@ if (!isset($detail_resep) || !$detail_resep) {
             <p><?php echo nl2br(htmlspecialchars($detail_resep->deskripsi)); ?></p>
         </div>
         
-        <hr>
         
-        <?php 
-        /* if (isset($is_favorited) && $is_favorited) {
-            echo '<button class="btn-favorit active">Sudah Jadi Favorit</button>';
-        } else if (isset($is_favorited)) {
-            echo '<button class="btn-favorit">Tambah ke Favorit</button>';
-        }
-        */
-        ?>
-        
-    </div>
     
 </body>
 </html>

@@ -6,13 +6,7 @@
     <link rel="stylesheet" href="../asset/style_update.css">
 </head>
 <body>
-  <!-- Navbar -->
-    <!-- <a class="edit" aria-current="edit" href="edit_user.php">edit</a> -->
-  </li>
-  <!-- <li class="nav-daftar"> -->
-    <!-- <a class="daftar" href="form_daftar_user.php">daftar</a> -->
-  </li>
-</ul>
+  
 
   <div class="form-container">
     <h2>Edit Form User</h2>

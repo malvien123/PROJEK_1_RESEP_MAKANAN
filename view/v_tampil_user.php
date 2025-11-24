@@ -1,10 +1,4 @@
 <?php
-// view/v_tampil_user.php
-
-// session_start(); 
-// Variabel $users tersedia di sini karena sudah disiapkan oleh c_user.php
-
-// Pastikan $users tersedia, jika tidak (misal error di Model), sediakan array kosong
 if (!isset($users)) {
     $users = [];
 }
