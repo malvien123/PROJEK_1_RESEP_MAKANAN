@@ -14,7 +14,7 @@ body {
       border-radius: 12px;
       box-shadow: 0 6px 14px rgba(0,0,0,0.2);
       width: 100%;
-      max-width: 320px; /* DIPERKECIL */
+      max-width: 320px; 
       animation: fadeIn 0.8s ease-in-out;
     }
 
@@ -22,12 +22,12 @@ body {
       text-align: center;
       color: #2193b0;
       margin-bottom: 18px;
-      font-size: 20px; /* DIPERKECIL */
+      font-size: 20px; 
     }
 
     label {
       font-weight: bold;
-      font-size: 13px; /* DIPERKECIL */
+      font-size: 13px; 
       color: #333;
       display: block;
       margin-bottom: 5px;
@@ -35,12 +35,12 @@ body {
 
     input, select ,button{
       width: 100%;
-      padding: 8px; /* DIPERKECIL */
+      padding: 8px; 
       margin-bottom: 14px;
       border: 1px solid #ccc;
       border-radius: 6px;
       outline: none;
-      font-size: 13px; /* DIPERKECIL */
+      font-size: 13px; 
       transition: 0.3s;
     }
 
@@ -55,7 +55,7 @@ body {
       font-weight: bold;
       border: none;
       cursor: pointer;
-      padding: 8px; /* DIPERKECIL */
+      padding: 8px; 
       border-radius: 6px;
       font-size: 14px;
       transition: background 0.3s;

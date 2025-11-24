@@ -1,6 +1,6 @@
 body {
-    font-family: 'Poppins', sans-serif; /* Font modern yang sering digunakan */
-    background: linear-gradient(135deg, #f0f4f7 0%, #dbe4f0 100%); /* Gradasi lembut */
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(135deg, #f0f4f7 0%, #dbe4f0 100%); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,18 +9,17 @@ body {
     color: #333;
 }
 
-/* Kotak Form Utama (The Card) */
+
 .login-container {
     background-color: #ffffff;
     padding: 45px;
-    border-radius: 15px; /* Sudut lebih melengkung */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih dalam */
+    border-radius: 15px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
     width: 380px;
     max-width: 90%;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efek saat form di-hover (Opsional: memberikan kesan interaktif) */
 .login-container:hover {
     transform: translateY(-5px); 
 }
@@ -52,7 +51,7 @@ input[type="password"] {
     width: 100%;
     padding: 14px;
     border: 1px solid #e0e0e0;
-    border-radius: 10px; /* Input lebih halus */
+    border-radius: 10px; 
     box-sizing: border-box; 
     font-size: 16px;
     transition: all 0.3s;
@@ -62,7 +61,7 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
     border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); /* Efek fokus yang lembut */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); 
     background-color: #fff;
     outline: none;
 }
@@ -88,7 +87,7 @@ button[type="submit"]:hover {
     box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
 }
 
-/* Gaya Notifikasi (Sukses/Error) */
+
 .notification {
     padding: 15px;
     border-radius: 8px;
@@ -99,13 +98,13 @@ button[type="submit"]:hover {
 }
 
 .success {
-    background-color: #e6ffed; /* Hijau super muda */
+    background-color: #e6ffed; 
     color: #008744; 
     border: 1px solid #00c853;
 }
 
 .error {
-    background-color: #fff0f0; /* Merah super muda */
+    background-color: #fff0f0; 
     color: #c90000;
     border: 1px solid #ff4444;
 }
